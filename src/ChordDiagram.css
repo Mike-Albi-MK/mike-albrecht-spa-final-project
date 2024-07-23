@@ -1,0 +1,33 @@
+.chord-diagram {
+    text-align: center;
+  }
+  
+  .diagram {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .string {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px;
+  }
+  
+  .fret {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .finger {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }

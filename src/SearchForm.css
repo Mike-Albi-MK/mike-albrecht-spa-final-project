@@ -1,0 +1,10 @@
+.chord-grid {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px; 
+  }
+  
+  .chord-item {
+    flex: 1 1 calc(33.333% - 20px); 
+    box-sizing: border-box;
+  }
