@@ -1,8 +1,20 @@
-# React + Vite
+# mike-albrecht-spa-final-project
+My final project for the spa module
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SCHEDULE
 
-Currently, two official plugins are available:
+*** Day-01: ***
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+– Concept Phase: What is the project about? What kind of web application do I want to create?
+
+/*it will be a chord library*/
+
+Basic Questions: what's the scope; basic design and framework, which techniques, components or external structure do I might need
+
+Defining framework and basic design of the application
+
+/*What has been done*/
+
+Repository created, troubleshooting with pushing needs fixing
+
+Basic code structure has been setup, first essential components that can be coded without yet knowing how the page will look like
