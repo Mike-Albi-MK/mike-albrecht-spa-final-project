@@ -1,6 +1,40 @@
 import React, { useState } from 'react';
 
-const SearchForm = ({onSearch}) => {
+function SearchForm({ onSearch }) {
+  const [chordName, setChordName] = useState('');
+
+  const handleChange = (e) => {
+    setChordName(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!chordName || chordName.trim() === '') {
+      console.error('Error: The "chordName" parameter is required.');
+      return;
+    }
+
+    onSearch({ chordName });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="chordName"
+        value={chordName}
+        onChange={handleChange}
+        placeholder="Enter chord name (e.g., F maj7)"
+      />
+      <button type="submit">Search</button>
+    </form>
+  );
+}
+
+export default SearchForm;
+
+/*const SearchForm = ({onSearch}) => {
     const [root, setRoot] = useState('');
     const [quality, setQuality] = useState('');
     const [tension, setTension] = useState('');
@@ -42,4 +76,4 @@ const SearchForm = ({onSearch}) => {
         );
 };
 
-export default SearchForm;
+export default SearchForm; */
