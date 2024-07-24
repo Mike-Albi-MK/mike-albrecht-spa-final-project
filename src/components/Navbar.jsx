@@ -6,13 +6,19 @@ const Navbar = () => {
     <nav className="navigation">
         <ul>
             <li>
-                <NavLink to='/'>Home</NavLink>
+                <NavLink to='/'>HOME</NavLink>
             </li>
             <li>
-                <NavLink to='/search-form'>Search Chord</NavLink>
+                <NavLink to='/search-form'>SEARCH CHORD</NavLink>
             </li>
             <li>
-                <NavLink to="/favorites">Favorite Chords</NavLink>
+                <NavLink to='/song-list'>LEARN SONGS</NavLink>
+            </li>
+            <li>
+                <NavLink to="/favorites">FAVORITE CHORDS</NavLink>
+            </li>
+            <li>
+                <NavLink to="/contact">CONTACT</NavLink>
             </li>
         </ul>
     </nav>

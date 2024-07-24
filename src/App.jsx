@@ -5,7 +5,9 @@ import Header from './components/Header';
 import ChordItem from './components/ChordItem';
 import ChordList from './components/ChordList';
 import SearchForm from './components/SearchForm';
-import NotFound from './components/NotFound';
+import SongSearchForm from './components/SongSearchForm';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 import './App.css'
 
 function App() {
@@ -52,9 +54,12 @@ function App() {
               <Route path='/search-form' element={<SearchForm onSearch={handleSearch} />}/>
               <Route path='/chord-item' element={<ChordItem />}/>
               <Route path='/chord-list' element={<ChordList chords={chords} addToFavorites={addToFavorites} />}/>
-              <Route path='*' element={<NotFound />}/>
+              <Route path='/song-list' element={<SongSearchForm />} />
+              <Route path='/contact' element={<ContactForm />}/>
+              <Route path='*' element={<Home />}/>
         </Routes>
         <ChordList chords={chords} />
+        <Footer />
       
     </div>
   )

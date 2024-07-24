@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from './Header';
 import ChordItem from './ChordItem';
 import '../SearchForm.css';
 
@@ -26,24 +27,46 @@ function SearchForm() {
 
   return (
     <div>
+      
+      <div className="logo">
+        <a href="/">
+          <h3 id="logo-name">chord spotter</h3>
+        </a>
+        </div>
+            <Header />
+
+      <div className="rules">
+        <h2>How it works</h2>
+        <p>Type any chord you like.</p>
+        <p>The name should be written as a capital letter like for example C. Then you can determine major or minor, extensions like 7, 9, 11 or 13. You can also add another bass note over you root.
+        </p>
+      </div>
+
+      <div className="search">
       <input
+        className="chord-search"
         type="text"
         value={chordName}
         onChange={(e) => setChordName(e.target.value)}
         placeholder="Enter chord name (e.g., Fmaj7)"
       />
-      <button onClick={fetchAChord}>See how to play your chord</button>
+
+      <button className="chord-button" onClick={fetchAChord}>See how to play your chord</button>
+
       {chordData && (
         <div className="chord-grid">
           {chordData.map((chord, index) => (
+
             <div key={index} className="chord-item">
               <h2>Variation {index + 1}</h2>
               <pre>{JSON.stringify(chord, null, 2)}</pre>
               <ChordItem chord={chord} />
+
             </div>
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 }
