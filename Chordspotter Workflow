@@ -1,0 +1,51 @@
+*** Components: ***
+
+    App Component:
+
+          The root component that holds the main state and passes props to child components.
+
+    ChordList Component: 
+
+          Displays a list of available chords.
+
+    ChordDetail Component: 
+
+          Shows detailed information about a selected chord.
+
+    ChordForm Component: 
+
+          A form to add new chords to the library.
+
+    Search Component: 
+
+          Allows users to search for specific chords.
+
+Workflow:
+
+    State Management:
+        The App Component manages the state of the chords. It holds an array of chord objects and the current selected chord.
+        It uses state management (either React’s useState or a state management library like Redux) to handle the state.
+
+    Data Flow:
+        The App Component passes the list of chords and state management functions (e.g., setChords, setSelectedChord) as props to the ChordList and ChordForm components.
+        The ChordList Component maps through the list of chords and displays each chord. When a chord is clicked, it calls a function passed down from the App Component to set the selected chord.
+        The ChordDetail Component receives the selected chord as a prop and displays detailed information about it.
+        The ChordForm Component includes a form to add new chords. Upon submission, it updates the state in the App Component with the new chord.
+        The Search Component filters the list of chords based on user input and updates the ChordList Component.
+
+App Component
+   |
+   |-- State: chords, selectedChord
+   |-- Functions: setChords, setSelectedChord
+   |
+   |-- ChordList Component (props: chords, setSelectedChord)
+   |       |
+   |       |-- onClick -> setSelectedChord
+   |
+   |-- ChordDetail Component (props: selectedChord)
+   |
+   |-- ChordForm Component (props: setChords)
+   |       |
+   |       |-- onSubmit -> setChords
+   |
+   |-- Search Component (props: chords, setChords)
