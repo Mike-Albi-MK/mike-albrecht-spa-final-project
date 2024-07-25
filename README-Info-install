@@ -1,0 +1,45 @@
+mike-albrecht-spa-final-project:
+
+*** CHORD SPOTTER ***
+
+A guitar chord library app.
+
+This single-page-application provides users with detailed details of how guitar chords are constructed, 
+means which tones are used to form them. Which spots on the fretboard have to covered to play the chords.
+
+The information is applied to chords of all kind. Major, minor, added 4th, 6th or 7th chords and extensions
+like 9, 11, 13 or augmented and diminished values.
+
+chord spotter uses the https://api.uberchord.com/ to fetch the data for each chord which is in return displayed
+as a const object containing the information. 
+
+For example the dmin chord.
+
+{
+  "strings": "X X 0 2 3 1",
+  "fingering": "X X X 2 3 1",
+  "chordName": "D,m,,",
+  "enharmonicChordName": "D,m,,",
+  "voicingID": "9223372036891542527",
+  "tones": "D,F,A"
+}
+
+There also variations of the chord displayed at the same time for a greater overview of the fretboard.
+
+Now thanks to the vexchord component at https://github.com/0xfe/vexchords, chord spotter provides users
+with a visualization of all the chords in the browser translating the data into easily appliable chord digrams.
+
+*** HOW TO INSTALL ***
+
+1. Cloning the Repository:
+
+    git clone https://github.com/your-username/guitar-chord-library.git
+    cd guitar-chord-library
+
+2. Installing dependencies:
+
+    npm install
+
+3. Running the app:
+
+    npm start
